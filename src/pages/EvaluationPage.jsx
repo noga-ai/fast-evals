@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { saveAs } from "file-saver";
 import Papa from "papaparse";
 
-function EvaluationPage() {
+const EvaluationPage = () => {
   const {
     records,
     currentIndex,
@@ -248,6 +248,6 @@ function EvaluationPage() {
       </footer>
     </div>
   );
-}
+};
 
 export default EvaluationPage;
