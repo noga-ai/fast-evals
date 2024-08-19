@@ -72,6 +72,9 @@ function EvaluationPage() {
     saveAs(blob, "outputs.csv");
   };
 
+  // Calculate progress percentage
+  const progressPercentage = ((currentIndex + 1) / records.length) * 100;
+
   if (records.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center bg-gray-100">
@@ -124,6 +127,14 @@ function EvaluationPage() {
         <h1 className="text-center text-3xl font-bold mb-6">
           Evaluation Rating
         </h1>
+
+        {/* Progress Bar */}
+        <div className="w-full bg-gray-300 rounded-full h-4 mb-6">
+          <div
+            className="bg-blue-500 h-4 rounded-full"
+            style={{ width: `${progressPercentage}%` }}
+          ></div>
+        </div>
 
         <div className="mb-6">
           <textarea

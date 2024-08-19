@@ -3,33 +3,49 @@ import React, { createContext, useState, useContext } from "react";
 const RecordsContext = createContext();
 
 export const useRecords = () => useContext(RecordsContext);
-
+const initialRecords = [
+  {
+    sideA:
+      "Explain the benefits of the new software update in terms of system performance and user experience.",
+    sideB: "What are the changes in the new software update?",
+    input:
+      "Assess the effectiveness of the prompts in eliciting detailed responses.",
+    Q1: "Which prompt (sideA or sideB) is more effective in obtaining a comprehensive response?",
+    Q2: "What makes the more effective prompt better?",
+    Q3: "How could the less effective prompt be improved?",
+    A1: "",
+    A2: "",
+    A3: "",
+  },
+  {
+    sideA:
+      "Discuss the key advantages of the electric car, focusing on range and acceleration.",
+    sideB: "What are the features of the electric car?",
+    input:
+      "Evaluate the prompts for their ability to draw out detailed reviews.",
+    Q1: "Which prompt (sideA or sideB) leads to a more detailed and informative review?",
+    Q2: "Why does the more effective prompt work better?",
+    Q3: "Suggestions for enhancing the less effective prompt?",
+    A1: "",
+    A2: "",
+    A3: "",
+  },
+  {
+    sideA:
+      "Analyze the novel's exploration of themes and character development.",
+    sideB: "What is the novel about?",
+    input:
+      "Determine the effectiveness of the prompts in generating insightful literary analysis.",
+    Q1: "Which prompt (sideA or sideB) results in a more insightful analysis?",
+    Q2: "What aspects of the more effective prompt contribute to its success?",
+    Q3: "How can the less effective prompt be improved to elicit better analysis?",
+    A1: "",
+    A2: "",
+    A3: "",
+  },
+];
 export const RecordsProvider = ({ children }) => {
   // Sample test records
-  const initialRecords = [
-    {
-      sideA: "This is side A of record 1",
-      sideB: "This is side B of record 1",
-      input: "This is the input for record 1",
-      Q1: "What is your evaluation of side A?",
-      Q2: "What is your evaluation of side B?",
-      Q3: "Any additional comments?",
-      A1: "",
-      A2: "",
-      A3: "",
-    },
-    {
-      sideA: "This is side A of record 2",
-      sideB: "This is side B of record 2",
-      input: "This is the input for record 2",
-      Q1: "How does side A compare to side B?",
-      Q2: "What improvements can be made to side B?",
-      Q3: "Overall rating for this comparison?",
-      A1: "",
-      A2: "",
-      A3: "",
-    },
-  ];
 
   const [records, setRecords] = useState(initialRecords);
   const [outputs, setOutputs] = useState([]);
