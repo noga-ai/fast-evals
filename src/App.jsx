@@ -8,7 +8,7 @@ import { RecordsProvider } from "./context/RecordsContext";
 function App() {
   return (
     <RecordsProvider>
-      <Router>
+      <Router basename="/fast-evals">
         <Routes>
           <Route path="/" element={<EvaluationPage />} />
           <Route path="/questions" element={<QuestionSettingsModal />} />
