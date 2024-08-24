@@ -129,7 +129,7 @@ const EvaluationPage = () => {
 
       <main className="flex-grow w-full max-w-4xl p-6">
         <h1 className="text-center text-3xl font-bold mb-6">
-          Evaluation Rating
+          ⚡Lightning-Fast Human Ratings⚡
         </h1>
 
         {/* Progress Bar */}
@@ -208,11 +208,10 @@ const EvaluationPage = () => {
           </button>
           <button
             onClick={handleNextOrAddLast}
-            className={`bg-blue-500 text-white px-4 py-2 rounded ${
-              lastRecordAdded
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-blue-600"
-            }`}
+            className={`bg-blue-500 text-white px-4 py-2 rounded ${lastRecordAdded
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-blue-600"
+              }`}
             disabled={lastRecordAdded}
           >
             {currentIndex >= records.length - 1
@@ -247,7 +246,7 @@ const EvaluationPage = () => {
 
       <footer className="w-full bg-white text-center p-4 shadow">
         <div className="text-gray-500">
-          © 2022 Noga Eval Tool. All rights reserved.
+          © 2024 Noga AI. All rights reserved.
         </div>
       </footer>
     </div>
